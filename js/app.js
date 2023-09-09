@@ -396,59 +396,69 @@ cardapio.metodos = {
 
     // validação antes de prosseguir para a etapa 3
     resumoPedido: () => {
-
-
         let endereco = $("#txtEndereco").val().trim();
         let bairro = $("#txtBairro").val().trim();
-        let cidade = $("#txtCidade").val().trim();
+        let referencia = $("#txtRef").val().trim();
         let uf = $("#ddlUf").val().trim();
         let numero = $("#txtNumero").val().trim();
-
-
-
-
+    
         if (endereco.length <= 0) {
             cardapio.metodos.mensagem('Informe o Endereço, por favor.');
             $("#txtEndereco").focus();
             return;
         }
-
+    
         if (bairro.length <= 0) {
             cardapio.metodos.mensagem('Informe o Bairro, por favor.');
             $("#txtBairro").focus();
             return;
         }
-
-        if (cidade.length <= 0) {
-            cardapio.metodos.mensagem('Informe a Cidade, por favor.');
-            $("#txtCidade").focus();
-            return;
-        }
-
-        if (uf == "-1") {
-            cardapio.metodos.mensagem('Informe a UF, por favor.');
-            $("#ddlUf").focus();
-            return;
-        }
-
         if (numero.length <= 0) {
             cardapio.metodos.mensagem('Informe o Número, por favor.');
             $("#txtNumero").focus();
             return;
         }
+        if (referencia.length <= 0) {
+            cardapio.metodos.mensagem('Informe o ponto de referência, por favor.');
+            $("#txtRef").focus();
+            return;
+        }
+    
+        if (uf == "-1") {
+            cardapio.metodos.mensagem('Informe a UF, por favor.');
+            $("#ddlUf").focus();
+            return;
+        }
+    
 
+    
+        let troco = null; // Inicialize a variável troco como null
+    
+        if (uf === 'DINHEIRO') {
+            // Se a forma de pagamento for dinheiro, verifique o valor do troco.
+            troco = $("#troco").val().trim();
+    
+            if (troco === "") {
+                cardapio.metodos.mensagem('Informe o valor do troco, por favor.');
+                $("#troco").focus();
+                return;
+            }
+        }
+    
         MEU_ENDERECO = {
             endereco: endereco,
             bairro: bairro,
-            cidade: cidade,
+            referencia: referencia,
             uf: uf,
             numero: numero,
+            troco: uf === 'DINHEIRO' ? troco : 'Não precisa' // Adicione o valor do troco ao objeto de endereço quando aplicável
         }
-
+    
         cardapio.metodos.carregarEtapa(3);
         cardapio.metodos.carregarResumo();
-
     },
+    
+    
 
     // carrega a etapa de Resumo do pedido
     carregarResumo: () => {
@@ -466,7 +476,7 @@ cardapio.metodos = {
 
         });
 
-        $("#resumoEndereco").html(`${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`);
+        $("#resumoEndereco").html(`${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}, ${MEU_ENDERECO.referencia}`);
         $("#cidadeEndereco").html(`${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} `);
 
         cardapio.metodos.finalizarPedido();
@@ -481,8 +491,9 @@ cardapio.metodos = {
             var texto = 'Olá! gostaria de fazer um pedido:';
             texto += `\n*Itens do pedido:*\n\n\${itens}`;
             texto += '\n*Endereço de entrega:*';
-            texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}, ${MEU_ENDERECO.cidade}`;
+            texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}, ${MEU_ENDERECO.referencia}`;
             texto += `\n*Forma de pagamento*: ${MEU_ENDERECO.uf} `;
+            texto += `\n*Troco para*: ${MEU_ENDERECO.troco} `;
             texto += `\n\n*Total: R$ ${(VALOR_CARRINHO).toFixed(2).replace('.', ',')}*`;
 
             var itens = '';
