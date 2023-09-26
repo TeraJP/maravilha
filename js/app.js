@@ -184,7 +184,9 @@ cardapio.metodos = {
             $("#btnEtapaEndereco").addClass('hidden');
             $("#btnEtapaResumo").addClass('hidden');
             $("#btnVoltar").addClass('hidden');
-        }
+            $("#observacao1").removeClass('hidden');
+        }  
+
         
         if (etapa == 2) {
             $("#lblTituloEtapa").text('Endereço de entrega:');
@@ -200,6 +202,7 @@ cardapio.metodos = {
             $("#btnEtapaEndereco").removeClass('hidden');
             $("#btnEtapaResumo").addClass('hidden');
             $("#btnVoltar").removeClass('hidden');
+            $("#observacao1").addClass('hidden');
         }
 
         if (etapa == 3) {
@@ -217,6 +220,7 @@ cardapio.metodos = {
             $("#btnEtapaEndereco").addClass('hidden');
             $("#btnEtapaResumo").removeClass('hidden');
             $("#btnVoltar").removeClass('hidden');
+            $("#observacao1").addClass('hidden');
         }
 
     },
@@ -262,6 +266,7 @@ cardapio.metodos = {
         }
 
     },
+    
 
     // diminuir quantidade do item no carrinho
     diminuirQuantidadeCarrinho: (id) => {
@@ -347,7 +352,7 @@ cardapio.metodos = {
 
     },
 
-    // API ViaCEP
+   /*  // API ViaCEP
      buscarCep: () => {
 
         // cria a variavel com o valor do cep
@@ -392,7 +397,7 @@ cardapio.metodos = {
             $("#txtCEP").focus();
         }
 
-    }, 
+    },  */
 
     // validação antes de prosseguir para a etapa 3
     resumoPedido: () => {
@@ -401,6 +406,7 @@ cardapio.metodos = {
         let referencia = $("#txtRef").val().trim();
         let uf = $("#ddlUf").val().trim();
         let numero = $("#txtNumero").val().trim();
+        let observacao = $("#observacao").val().trim();
     
         if (endereco.length <= 0) {
             cardapio.metodos.mensagem('Informe o Endereço, por favor.');
@@ -430,8 +436,6 @@ cardapio.metodos = {
             return;
         }
     
-
-    
         let troco = null; // Inicialize a variável troco como null
     
         if (uf === 'DINHEIRO') {
@@ -444,14 +448,18 @@ cardapio.metodos = {
                 return;
             }
         }
+
+
+
     
         MEU_ENDERECO = {
             endereco: endereco,
             bairro: bairro,
             referencia: referencia,
-            uf: uf,
+/*             uf: uf, */
             numero: numero,
-            troco: uf === 'DINHEIRO' ? troco : 'Não precisa' // Adicione o valor do troco ao objeto de endereço quando aplicável
+            troco: uf === 'DINHEIRO' ? troco : 'Não precisa',
+            observacao: observacao 
         }
     
         cardapio.metodos.carregarEtapa(3);
@@ -495,6 +503,7 @@ cardapio.metodos = {
             texto += `\n*Forma de pagamento*: ${MEU_ENDERECO.uf} `;
             texto += `\n*Troco para*: ${MEU_ENDERECO.troco} `;
             texto += `\n\n*Total: R$ ${(VALOR_CARRINHO).toFixed(2).replace('.', ',')}*`;
+            texto += `\n\n*Observação*: ${MEU_ENDERECO.observacao}`
 
             var itens = '';
 

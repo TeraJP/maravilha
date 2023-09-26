@@ -1,5 +1,5 @@
 var MENU = {
-    "churrasco": [
+/*     "churrasco": [
         {
             "id": "ribs-brisket-and-burnt-ends",
             "img": "./img/cardapio/churrasco/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg",
@@ -84,122 +84,122 @@ var MENU = {
             "dsc": "Best of Texas BBQ Combo - Serves 14",
             "price": 269
         }
-    ],
+    ], */
     "burgers": [
         {
-            "id": "the-gramercy-tavern-burger-4-pack",
+            "id": "misto",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
             "name": "Misto",
             "dsc": "The Gramercy Tavern Burger - 4 Pack",
             "price": 7
         },
         {
-            "id": "shake-shack-shackburger-8-pack",
+            "id": "hamburguer",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-8-pack.973a5e26836ea86d7e86a327becea2b0.jpg",
             "name": "Hambúrguer",
             "dsc": "Shake Shack ShackBurger® - 8 Pack",
             "price": 7
         },
         {
-            "id": "gotts-cheeseburger-kit-for-4",
+            "id": "xburguer",
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
             "name": "X-Búrguer",
             "dsc": "Gott's Complete Cheeseburger Kit for 4",
             "price": 9
         },
         {
-            "id": "le-big-matt-kit-for-6",
+            "id": "bauru",
             "img": "./img/cardapio/burguers/le-big-matt-kit-for-6.1ddae6e382bb3218eeb0fd5247de115a.jpg",
             "name": "Bauru",
             "dsc": "Le Big Matt Burger Kit for 6",
             "price": 9
         },
         {
-            "id": "shake-shack-shackburger-16-pack",
+            "id": "xapresuntado",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-16-pack.316f8b09144db65931ea29e34869287a.jpg",
             "name": "X-Apresuntado",
             "dsc": "Shake Shack Shackburger® - 16 Pack",
             "price": 11
         },
         {
-            "id": "21-usda-prime-burgers-pack-of-18-8oz-each",
+            "id": "americano",
             "img": "./img/cardapio/burguers/usda-prime-burgers-pack-of-18-8oz-each.274c67f15aa1c0b210dbf51801706670.jpg",
             "name": "Americano",
             "dsc": "USDA Prime Burgers - Pack of 18 (8oz each)",
             "price": 11
         },
         {
-            "id": "double-stack-burger-kit-for-4",
+            "id": "eggsxburguer",
             "img": "./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg",
             "name": "Eggs-X Búrguer",
             "dsc": "Double Stack Burger Kit for 4",
             "price": 13
         },
         {
-            "id": "goldbelly-burger-bash-pack",
+            "id": "xfrango",
             "img": "./img/cardapio/burguers/the-burger-bash-package.bd9d12d031865940bbe5faf15f1a62f8.jpg",
             "name": "X-Frango",
             "dsc": "Goldbelly \"Burger Bash\" Pack",
             "price": 13
         },
         {
-            "id": "burger-au-poivre-kit-4-pack",
+            "id": "xfile",
             "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
             "name": "X-Filé",
             "dsc": "Burger Au Poivre Kit - 4 Pack",
             "price": 13
         },
         {
-            "id": "goldbelly-burger-blend-4-lbs",
+            "id": "xcalabresa",
             "img": "./img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg",
             "name": "X-Calabresa",
             "dsc": "Goldbelly Burger Blend - 4 lbs.",
             "price": 11
         },
         {
-            "id": "gotts-complete-cheeseburger-kit-for-8",
+            "id": "xbacon",
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-8.092aa049d00286fa1733d720decc782e.jpg",
             "name": "X-Bacon",
             "dsc": "Gott's Complete Cheeseburger Kit for 8",
             "price": 13
         },
         {
-            "id": "gramercy-tavern-burger-kielbasa-combo",
+            "id": "eggsbacon",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
             "name": "Eggs-Bacon",
             "dsc": "Gramercy Tavern Burger + Kielbasa Combo",
             "price": 15
         },
         {
-            "id": "gramercy-tavern-burger-kielbasa-combo",
+            "id": "frangoespecial",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
             "name": "Frango Especial",
             "dsc": "Gramercy Tavern Burger + Kielbasa Combo",
             "price": 16
         },
         {
-            "id": "gramercy-tavern-burger-kielbasa-combo",
+            "id": "fileespecial",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
             "name": "Filé Especial",
             "dsc": "Gramercy Tavern Burger + Kielbasa Combo",
             "price": 17
         },
         {
-            "id": "gramercy-tavern-burger-kielbasa-combo",
+            "id": "dacasa",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
             "name": "Da Casa",
             "dsc": "Gramercy Tavern Burger + Kielbasa Combo",
             "price": 22
         },
         {
-            "id": "gramercy-tavern-burger-kielbasa-combo",
+            "id": "pizza",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
             "name": "Pizza",
             "dsc": "Gramercy Tavern Burger + Kielbasa Combo",
             "price": 8
         }
     ],
-    "sobremesas": [
+/*     "sobremesas": [
         {
             "id": "15259-german-chocolate-killer-brownie-tin-pack",
             "img": "./img/cardapio/sobremesas/german-chocolate-killer-brownie-tin-pack.5ebc34160f28767a9d94c4da2e04c4b9.jpg",
@@ -284,8 +284,8 @@ var MENU = {
             "dsc": "Jacques' World Famous Chocolate Chip Cookies - 12 Pack",
             "price": 69.95
         }
-    ],
-    "bebidas": [
+    ], */
+/*     "bebidas": [
         {
             "id": "hong-kong-boba-tea-kit-for-6",
             "img": "./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg",
@@ -370,15 +370,15 @@ var MENU = {
             "dsc": "NOLA Cold Brew Concentrate Bag-in-Box",
             "price": 40
         }
-    ],
+    ], */
     "pizzas": [
         {
-            "id": "2-lou-malnatis-deep-dish-pizzas",
+            "id": "copocafe",
             "img": "./img/cardapio/pizzas/2-lou-malnatis-deep-dish-pizzas.bf0fe065d251a9cca3925b269d443a27.jpg",
-            "name": "Lou Malnati's Pizza",
+            "name": "Copo padrão - 300ml ",
             "dsc": "2 Lou Malnati's Deep Dish Pizzas",
-            "price": 67.99
-        },
+            "price": 2.50
+        }/* ,
         {
             "id": "23699-choose-your-own-thin-crust-pizza-4-pack",
             "img": "./img/cardapio/pizzas/choose-your-own-thin-crust-pizza-4-pack.b928a2008eab50c65dc87e59b5952190.jpg",
@@ -455,9 +455,9 @@ var MENU = {
             "name": "The Columbia Inn",
             "dsc": "Plain Thin Crust Pizza - 4 Pack",
             "price": 79
-        }
+        } */
     ],
-    "steaks": [
+ /*    "steaks": [
         {
             "id": "california-reserve-filet-mignon-steaks-gift-box",
             "img": "./img/cardapio/steaks/california-reserve-filet-mignon-steaks-gift-box.bf226e317aad85f47897ae7e325f790d.jpg",
@@ -542,5 +542,5 @@ var MENU = {
             "dsc": "Mesquite Smoked Peppered Beef Tenderloin",
             "price": 165
         }
-    ]
+    ] */
 }
